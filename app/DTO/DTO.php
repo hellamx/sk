@@ -5,15 +5,15 @@ namespace App\DTO;
 class DTO
 {
     /**
-     * Creating DTO from request.
+     * Creating DTO.
      *
-     * @param $request
+     * @param $data
      * @return static
      */
-    public static function fromRequest($request): static
+    public static function from($data): static
     {
         foreach (get_class_vars(static::class) as $fieldName => $fieldValue) {
-            $dataMapper[$fieldName] = $request->{$fieldName} ?? null;
+            $dataMapper[$fieldName] = $data->{$fieldName} ?? $data[$fieldName] ?? null;
         }
 
         $classToMap = static::class;

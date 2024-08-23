@@ -15,6 +15,8 @@ return [
 
     'default' => env('MAIL_MAILER', 'smtp'),
 
+    'product_listener_email' => env('PRODUCT_LISTENER_EMAIL', 'bolsunovski.e@gmail.com'),
+
     /*
     |--------------------------------------------------------------------------
     | Mailer Configurations

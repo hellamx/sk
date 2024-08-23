@@ -1,0 +1,29 @@
+[
+    {
+        "eId": 1,
+        "title": "Product 222",
+        "price": 101.01,
+        "categoriesEId": [
+            1,
+            2
+        ]
+    },
+    {
+        "eId": 2,
+        "title": "Product 111",
+        "price": 199.01,
+        "categoryEId": [
+            2,
+            3
+        ]
+    },
+    {
+        "eId": 3,
+        "title": "Product 3",
+        "price": 22,
+        "categoryEId": [
+            3,
+            1
+        ]
+    }
+]

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title', 12);
             $table->float('price', 5, 2, 'unsigned');
-            $table->integer('eId')->nullable();
+            $table->integer('eId', false, 'unsigned');
+            $table->index('eId');
         });
     }
 

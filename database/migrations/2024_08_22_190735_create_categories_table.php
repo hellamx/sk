@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('title', 12);
-            $table->integer('eId')->nullable();
+            $table->integer('eId', false, 'unsigned');
+            $table->index('eId');
         });
     }
 

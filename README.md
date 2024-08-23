@@ -35,3 +35,25 @@ docker compose exec php php artisan migrate
 # https://localhost:8080 - проект
 # https://localhost:8082 - phpMyAdmin
 ```
+
+### Тестирование команды
+```bash
+# Файлы categories.json и products.json лежат в storage/app/exchange
+docker compose exec php php artisan json:read
+```
+
+### Тестирование письма
+```bash
+# Пользователь, кому отправлять уведомления
+PRODUCT_LISTENER_EMAIL=pavel.durov@gmail.com
+
+# Тестовые данные SMTP
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.yandex.ru
+MAIL_PORT=465
+MAIL_USERNAME=ebolsunovscky@yandex.ru
+MAIL_PASSWORD=dzmgasjfelfrffkb
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=ebolsunovscky@yandex.ru
+MAIL_FROM_NAME="${APP_NAME}"
+```

@@ -14,13 +14,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('category_product', function (Blueprint $table) {
-            $table->foreignIdFor(Category::class, 'category_id')
-                ->constrained('categories')
-                ->onDelete('cascade');
-
-            $table->foreignIdFor(Product::class, 'product_id')
-                ->constrained('products')
-                ->onDelete('cascade');
+            $table->integer('category_eId', false, 'unsigned');
+            $table->foreign('category_eId')->references('eId')->on('categories')->onDelete('cascade');
+            $table->integer('product_eId', false, 'unsigned');
+            $table->foreign('product_eId')->references('eId')->on('products')->onDelete('cascade');
         });
     }
 

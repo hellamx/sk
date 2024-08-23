@@ -5,7 +5,7 @@ namespace App\Http\Resources\Api;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CategoryResource extends JsonResource
+class ProductResource extends JsonResource
 {
     /**
      * Wrap data.
@@ -24,6 +24,7 @@ class CategoryResource extends JsonResource
         return [
             'id' => $this->resource->id,
             'title' => $this->resource->title,
+            'price' => $this->resource->price,
             'eId' => $this->resource->eId,
         ];
     }

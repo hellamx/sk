@@ -7,4 +7,5 @@ return [
     'field_must_be' => 'Поле :name должно быть типа :type',
     'field_out_of_range' => 'Поле :name должно находиться в диапазоне от :min до :max',
     'object_not_found' => 'Объект с id = :id не существует',
+    'object_for_sync_not_found' => 'Переданный(ые) объект(ы) :name не существует(ют)',
 ];

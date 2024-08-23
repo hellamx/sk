@@ -34,10 +34,10 @@ class Category extends Model
     /**
      * Many-to-many relationship
      *
-     * @return BelongsToMany
+     * @return belongsToMany
      */
-    public function products(): BelongsToMany
+    public function products(): belongsToMany
     {
-        return $this->belongsToMany(Product::class, 'products');
+        return $this->belongsToMany(Product::class, 'category_product', 'category_eId', 'product_eId', 'eId');
     }
 }
