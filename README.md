@@ -34,6 +34,7 @@ docker compose exec php php artisan migrate
 
 # https://localhost:8080 - проект
 # https://localhost:8082 - phpMyAdmin
+# http://127.0.0.1:8080/api/v1/product - CRUD
 ```
 
 ### Тестирование команды
